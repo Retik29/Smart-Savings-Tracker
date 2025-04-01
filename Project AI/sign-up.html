@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/x-icon" href="./favicon_io/android-chrome-512x512.png" sizes="64x64">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./sign-up.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.css">
+  <script src="https://unpkg.com/feather-icons"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <title>Sign Up - Finance Tracker</title>
+</head>   
+
+<body>
+  <nav>
+    <div class="navbar">
+      <a href="./index.html" class="logo"><i class="fas fa-chart-line"></i> Finance Tracker</a>
+      <ul class="nav-links">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./index.html#tracker">Use Tracker</a></li>
+        <li><a href="./index.html#how-it-works">How it works</a></li>
+      </ul>
+      <div class="buttons">
+        <a href="./login.html" class="btn-head"><i class="fas fa-sign-in-alt"></i> Log In</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <form class="signup-form" onsubmit="handleSignup(event)">
+      <h2>Create Account</h2>
+      <div class="form-group">
+        <label for="fullname">Full Name <span>*</span></label>
+        <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address <span>*</span></label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      </div>
+      <div class="form-group">
+        <label for="mobile">Mobile Number <span>*</span></label>
+        <input type="tel" id="mobile" name="mobile" placeholder="Enter your mobile number" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password <span>*</span></label>
+        <input type="password" id="password" name="password" placeholder="Create a password" required>
+      </div>
+      <div class="form-group">
+        <label for="confirm-password">Confirm Password <span>*</span></label>
+        <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+      </div>
+      <button type="submit">Create Account</button>
+      <p class="login-link">Already have an account? <a href="./login.html">Log in</a></p>
+    </form>
+  </div>
+
+  <footer>
+    <div class="footer">
+      <p>Created by Ritik Kumar Yadav, Aspiring Tech Developer</p>
+      <div class="contact-info">
+        <p><i class="fas fa-envelope"></i> Email: ritiknyadavofficial614@gmail.com</p>
+        <p><i class="fas fa-phone"></i> Contact: 9883628859</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>feather.replace();</script>
+  <script src="script.js"></script>
+  <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
+
+  <script>
+    function handleSignup(event) {
+      event.preventDefault();
+      // Here you would typically validate the form and send data to server
+      // For demo purposes, we'll just redirect
+      window.location.href = './index.html#tracker';
+    }
+  </script>
+</body>
+
+</html>

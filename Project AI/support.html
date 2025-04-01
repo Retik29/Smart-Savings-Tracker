@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/x-icon" href="./favicon_io/android-chrome-512x512.png" sizes="64x64">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./sign-up.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.css">
+  <script src="https://unpkg.com/feather-icons"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <title>Support - Finance Tracker</title>
+</head>
+
+<body>
+  <nav>
+    <div class="navbar">
+      <a href="./index.html" class="logo"><i class="fas fa-chart-line"></i> Finance Tracker</a>
+      <ul class="nav-links">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./index.html#tracker">Use Tracker</a></li>
+        <li><a href="./index.html#how-it-works">How it works</a></li>
+        <li><a href="./support.html">Support</a></li>
+      </ul>
+      <div class="buttons">
+        <a href="./login.html" class="btn-head"><i class="fas fa-sign-in-alt"></i> Log In</a>
+        <a href="./sign-up.html" class="btn-head"><i class="fas fa-user-plus"></i> Sign Up</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <form class="signup-form" onsubmit="handleSupport(event)">
+      <h2>Contact Support</h2>
+      <div class="form-group">
+        <label for="name">Your Name <span>*</span></label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Your Email <span>*</span></label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      </div>
+      <div class="form-group">
+        <label for="subject">Subject <span>*</span></label>
+        <input type="text" id="subject" name="subject" placeholder="Enter subject" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Message <span>*</span></label>
+        <textarea id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
+      </div>
+      <button type="submit">Send Message</button>
+      <div class="contact-info">
+        <p><i class="fas fa-envelope"></i> Email: ritiknyadavofficial614@gmail.com</p>
+        <p><i class="fas fa-phone"></i> Contact: 9883628859</p>
+      </div>
+    </form>
+  </div>
+
+  <footer>
+    <div class="footer">
+      <p>Created by Ritik Kumar Yadav, Aspiring Tech Developer</p>
+      <div class="contact-info">
+        <p><i class="fas fa-envelope"></i> Email: ritiknyadavofficial614@gmail.com</p>
+        <p><i class="fas fa-phone"></i> Contact: 9883628859</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function handleSupport(event) {
+      event.preventDefault();
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const subject = document.getElementById('subject').value;
+      const message = document.getElementById('message').value;
+      
+      // Create mailto link
+      const mailtoLink = `mailto:ritiknyadavofficial614@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
+      
+      // Open default email client
+      window.location.href = mailtoLink;
+    }
+  </script>
+  <script>feather.replace();</script>
+  <script src="script.js"></script>
+  <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
+</body>
+</html>
